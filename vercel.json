@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "functions": {
+    "api/index.js": { "maxDuration": 30, "memory": 1024 }
+  },
+  "rewrites": [
+    { "source": "/((?!_next|favicon.ico).*)", "destination": "/api/index.js" }
+  ]
+}
